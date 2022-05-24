@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+main {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#page_body {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: center;
+    max-width: 1312px;
+}
+
+#text_body {
+    display: flex;
+    flex-direction: row;
+}
+
+#bodhi {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 100%;
+}
+
+
+#head_title {
+    background-color: rgb(66, 145, 152);
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 40px;
+    padding-left: 100px;
+}
+
+
+.regular_text {
+    font-size: 16px;
+}
+
+#given_img {
+    width: 100%;
+}
+
+.img_caption {
+    font-size: 12px;
+}
+
+button {
+    border-radius: 15px;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    margin: 10px;
+    background-color: rgb(66, 145, 152);
+}
+
+.hide_part {
+    display: none;
+}
+
+.showed_part {
+    display: flex;
+}
+
+@media (max-width: 900px) {
+    #text_body {
+        flex-direction: column-reverse;
+    }
+    #bodhi {
+       width: 100%;
+    }
+}
