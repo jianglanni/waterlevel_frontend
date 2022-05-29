@@ -73,6 +73,12 @@ button {
 
 .showed_part {
     display: flex;
+    flex-direction: row;
+}
+
+#text_and_picker {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 900px) {
@@ -81,5 +87,8 @@ button {
     }
     #bodhi {
        width: 100%;
+    }
+    .showed_part {
+        flex-direction: column-reverse;
     }
 }
