@@ -6,6 +6,7 @@ import Barchart from'./BarChart';
 function App() {
   const [button_text, setText] = useState("See more");
   const [hidden_class, setHidden] = useState("hide_part");
+  const [show_form, setShow] = useState(false);
 
   const [date, setDate] = useState({month: 4, year: 2022 });
   function yearChange(newYear) {
@@ -47,9 +48,11 @@ function App() {
                 if (button_text == "See more") {
                     setText("See less");
                     setHidden("showed_part");
+                    setShow(true);
                 } else {
                     setText("See more");
                     setHidden("hide_part");
+                    setShow(false);
                 }
             }}>{button_text}</button>
             <div className={hidden_class}>
@@ -59,7 +62,7 @@ function App() {
                     </p>
                     <MonthPicker date = {date} yearFun = {yearChange} monthFun = {monthChange}/>
                 </div>
-                <Barchart/>
+                <Barchart show={show_form}/>
             </div>
         </div>
     </main>

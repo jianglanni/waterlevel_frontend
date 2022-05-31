@@ -3,14 +3,14 @@ import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 //import { setDatasets } from "react-chartjs-2/dist/utils";
 
-function Barchart(){
+function Barchart(props){
   const[data, setData] = useState({});
   useEffect(() => {
     setData({
       labels: ["Shasta", "Ororville", "Trinity Lake", "New Melones", "San Luis", "Don Pedro", "Berryessa"],//test
       datasets: [
         {
-          data: [123, 123, 142, 132, 143,42, 200],//test datas!!!
+          data: [123, 123, 142, 132, 143, 42, 200],//test datas!!!
           backgroundColor: "rgb(66, 145, 152)",
         },
         {
@@ -19,7 +19,6 @@ function Barchart(){
         }
       ]
     }
-      
     )
   },[]
     
@@ -42,11 +41,13 @@ function Barchart(){
         ],
     }
   };
-
-  return(
-    <Bar data={data} options={options} />
-      //<p>test.</p>
-  )
+  if (props.show) {
+      return(
+        <Bar data={data} options={options} />
+      )
+  } else {
+      return (<p>test.</p>);
+  }
 }
 
 export default Barchart;
