@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import MonthPicker from './MonthPicker';
+import Barchart from'./BarChart';
 
 function App() {
   const [button_text, setText] = useState("See more");
@@ -58,6 +59,7 @@ function App() {
                     </p>
                     <MonthPicker date = {date} yearFun = {yearChange} monthFun = {monthChange}/>
                 </div>
+                <Barchart/>
             </div>
         </div>
     </main>

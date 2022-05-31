@@ -12,7 +12,6 @@ function MonthPicker(props) {
     }
     
     function pickedYear (year) {
-      updateVisible(false);
       props.yearFun(year);
     }
     
