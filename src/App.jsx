@@ -18,7 +18,6 @@ function App() {
       let y = date.year;
       setDate({month: newMonth, year: y});
   }
-
   return (
     <main>
         <div id="head_title">
@@ -57,12 +56,20 @@ function App() {
             }}>{button_text}</button>
             <div className={hidden_class}>
                 <div id="text_and_picker">
+                    <div></div>
                     <p className="regular_text">
                         Here's a quick look at some of the data on reservoirs from the California Data Exchange Center, which consolidates climate and water data from multiple federal and state government agencies, and electric utilities. Select a month and year to see storage levels in the eleven largest in-state reservoirs. 
                     </p>
-                    <MonthPicker date = {date} yearFun = {yearChange} monthFun = {monthChange}/>
+                    <div id="mp">
+                      <p className="mpCaption">Change month: </p>
+                      <MonthPicker date = {date} yearFun = {yearChange} monthFun = {monthChange}/>
+                    </div>
+                    <div></div>
+                    <div></div>
                 </div>
-                <Barchart show={show_form}/>
+                <div id="chartdiv">
+                  <Barchart show={show_form} date={date}/>
+                </div>
             </div>
         </div>
     </main>

@@ -35,7 +35,7 @@ function MonthPicker(props) {
           </div> );
     } else {
         return (
-          <button onClick={showFun}>{date.month+"/"+date.year}</button>
+          <button id= "MonthPicker" onClick={showFun}>{date.month+"/"+date.year}</button>
         )
     }
 }

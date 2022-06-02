@@ -9,7 +9,6 @@ main {
 #page_body {
     display: flex;
     flex-direction: column;
-    margin: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
     align-self: center;
@@ -67,21 +66,60 @@ button {
     background-color: rgb(66, 145, 152);
 }
 
+#MonthPicker{
+  font-weight: 400;
+  width: 50%;
+  height: 40px;
+  margin: 0 auto;
+  padding: 3px 15px;
+  color: gray;
+  border-radius: 0px;
+  border: 1px solid gray;
+  background-color: white;
+  text-align: left;
+}
+
+.mpCaption{
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: rgb(66, 145, 152);
+  
+}
+
 .hide_part {
     display: none;
 }
 
 .showed_part {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    min-height: 500px;
 }
 
 #text_and_picker {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
-@media (max-width: 900px) {
+#chartdiv {
+    width: 50%;
+}
+
+@media (min-width: 901px) {
+    #page_body {
+        margin: 7%;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 900px) and (min-width:601px) {
+    #page_body{
+      margin-left:20%;
+      margin-right: 20%;
+      margin-top: 10%;
+    }
     #text_body {
         flex-direction: column-reverse;
     }
@@ -89,6 +127,37 @@ button {
        width: 100%;
     }
     .showed_part {
+        flex-direction: column;
+    }
+    #text_and_picker {
+        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    #chartdiv {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #page_body{
+      margin:15%;
+    }
+    #text_body {
         flex-direction: column-reverse;
+    }
+    #bodhi {
+       width: 100%;
+    }
+    .showed_part {
+        flex-direction: column;
+    }
+    #text_and_picker {
+        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    #chartdiv {
+        width: 100%;
     }
 }
